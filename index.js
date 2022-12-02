@@ -5,6 +5,9 @@ const port = process.env.PORT || 5000;
 const courses = require('./data/courses.json')
 
 app.use(cors())
+app.get('/', (req, res) => {
+  res.send("learning bee server is ready to use")
+})
 
 app.get('/courses', (req, res) => {
   res.send(courses)
